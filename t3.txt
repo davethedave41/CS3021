@@ -1,0 +1,35 @@
+/*WITH 6 REGISTER WINDOWS
+* Call: 172233
+* Window depth: 501
+* Register window: 2
+* Overflows: 84405
+* Underflows: 84405
+* Took: 3274000ns
+* Took: 0.003274s
+*
+* WITH 8 REGISTER WINDOWS
+* Call: 172233
+* Window depth: 501
+* Register window: 2
+* Overflows: 83445
+* Underflows: 83445
+* Took: 1295700ns
+* Took: 0.0012957s
+*
+* WITH 16 REGISTER WINDOWS
+* Call: 172233
+* Window depth: 501
+* Register window: 2
+* Overflows: 79725
+* Underflows: 79725
+* Took: 5804000ns
+* Took: 0.005804s
+*/
+
+/* For my implementation I followed the pseudo code on the slides for the underflow and overflow 
+* handling methods. I start with two register windows currently being used because two must be 
+* used at all times. Added in extra parameter for ackermann function that, passes in the number of
+* register windows being used. The accuracy of my program is not as high as it should be. I have
+* to add the maximum window depth to my underflows to make it match the number of overflows and 
+* underflows should match the number of overflows.
+*/
