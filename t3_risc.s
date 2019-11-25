@@ -1,8 +1,10 @@
         ; global variable g in r9
+
+        add r0, #4, r9
+
 public min
-min:    add r0, #4, r9
         ; int mint(int a, int b, int c) -optimised
-        add r0, r26, r1         ; a = p1
+min:    add r0, r26, r1         ; a = p1
         sub r27, r1, r0 {C}     ; if(b > v)
         jge min0                    
         xor r0, r0, r0          ; nop

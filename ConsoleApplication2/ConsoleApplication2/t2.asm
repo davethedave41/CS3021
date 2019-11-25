@@ -72,16 +72,16 @@ q:		mov		rax, [rsp+40]				; move e into a register before allocating shadow spac
 		mov		rdx, rcx					; push a
 		lea		rcx, wah				    ; push string
 		call	printf                      ; printf(...)
-	    mov     rax, [rsp+48]
+	    mov     rax, [rsp+48]				; return sum
 		add		rsp, 56						; deallocate shadow space
 		ret									; return rax
 
 public qns
 
-qns:	sub		rsp, 32					; allocate shadow space
-		lea		rcx, qnsx				; push string
-		call	printf					; printf("qns\n")
-		add		rsp, 32					; deallocate shadow space
-		mov		rax, 0					; return 0
-		ret		0						; return
+qns:	sub		rsp, 32						; allocate shadow space
+		lea		rcx, qnsx					; push string
+		call	printf						; printf("qns\n")
+		add		rsp, 32						; deallocate shadow space
+		mov		rax, 0						; return 0
+		ret		0							; return
 end
