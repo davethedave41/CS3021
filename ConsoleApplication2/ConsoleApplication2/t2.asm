@@ -83,5 +83,5 @@ qns:	sub		rsp, 32						; allocate shadow space
 		call	printf						; printf("qns\n")
 		add		rsp, 32						; deallocate shadow space
 		mov		rax, 0						; return 0
-		ret		0							; return
+		ret									; return
 end

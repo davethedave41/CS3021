@@ -5,7 +5,8 @@
 .data						     ; start of a data section
 public g					     ; export variable g
 g DWORD 4						 ; declare global variable g initialised to 4
-.code							 ; start of a code section
+.code							 ; start of a code section
+
  public  min                     ; make sure function name is exported
        ; function entry 
     min: push ebp                ;push frame pointer
